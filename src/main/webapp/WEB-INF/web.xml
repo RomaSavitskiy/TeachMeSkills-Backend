@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>user</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>ServletDayOfTheWeek</servlet-name>
+        <servlet-class>com.mycompany.web1.servlet.DayOfTheWeek</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDayOfTheWeek</servlet-name>
+        <url-pattern>/DayOfTheWeek</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ServletDayOfTheYear</servlet-name>
+        <servlet-class>com.mycompany.web1.servlet.DayOfTheYear</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletDayOfTheYear</servlet-name>
+        <url-pattern>/DayOfTheYear</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DBmainServlet</servlet-name>
+        <servlet-class>com.mycompany.web2.servlet.DBmainServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DBmainServlet</servlet-name>
+        <url-pattern>/DBmainServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DateServlet</servlet-name>
+        <servlet-class>com.mycompany.web2.servlet.DateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DateServlet</servlet-name>
+        <url-pattern>/dateServlet</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>com.mycompany.web1.filter.FirstFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/hello</url-pattern>
+    </filter-mapping>
+
+    <listener>
+        <listener-class>com.mycompany.web1.listener.FirstListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.mycompany.web1.listener.SecondListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.mycompany.web2.listener.DBListener</listener-class>
+    </listener>
+</web-app>

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Malaga";
+    src:
+            url("/fonts/MalagaOT-RegItalic.ttf") format("truetype"),
+            url('/fonts/MalagaOT-RegItalic.woff') format('woff'),
+            url('/fonts/MalagaOT-RegItalic.eot') format('embedded-opentype');
+    font-style: italic;
+}
+
+/* Date */
+.date-text {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    font-family: Malaga, serif;
+}
